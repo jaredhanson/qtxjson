@@ -18,11 +18,14 @@ To subsequently update to a newer version of yajl, pull the code:
 
 Commands executed when building yajl 2.0.4:
 
-    $ cd vendor/yajl
+    $ cd vendor/src/yajl
     $ mkdir build
     $ cd build
     $ cmake ..
     $ make
+
+Build output is located in "vendor/src/yajl/yajl-2.0.4".  For convienience, the
+output has been copied into "vendor/bin", "vendor/lib", etc.
 
 Refer to "vendor/yajl/BUILDING" for further information.
 
