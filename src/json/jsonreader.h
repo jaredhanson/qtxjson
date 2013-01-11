@@ -1,8 +1,11 @@
 #ifndef JSONREADER_H
 #define JSONREADER_H
 
+#include "jsonglobal.h"
 #include <QtCore>
 #include "jsonstreamreader.h"
+
+QTX_BEGIN_NAMESPACE
 
 
 class JsonReaderContext;
@@ -79,5 +82,8 @@ private:
     QHash<QString, QVariant> mObject;
     QList<QVariant> mArray;
 };
+
+
+QTX_END_NAMESPACE
 
 #endif // JSONREADER_H

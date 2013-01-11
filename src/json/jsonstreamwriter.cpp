@@ -1,5 +1,7 @@
 #include "jsonstreamwriter.h"
 
+QTX_BEGIN_NAMESPACE
+
 
 JsonStreamWriter::JsonStreamWriter()
 {
@@ -77,3 +79,6 @@ QByteArray JsonStreamWriter::data()
      
     //yajl_gen_clear(g);
 }
+
+
+QTX_END_NAMESPACE

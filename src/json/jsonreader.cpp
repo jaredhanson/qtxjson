@@ -1,5 +1,7 @@
 #include "jsonreader.h"
 
+QTX_BEGIN_NAMESPACE
+
 
 QHash<QString, QVariant> JsonReader::parse(const QByteArray & data)
 {
@@ -248,3 +250,6 @@ bool JsonReaderContext::add(const QString & key, const QVariant & value)
     
     return false;
 }
+
+
+QTX_END_NAMESPACE

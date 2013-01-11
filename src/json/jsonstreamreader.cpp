@@ -1,5 +1,7 @@
 #include "jsonstreamreader.h"
 
+QTX_BEGIN_NAMESPACE
+
 
 static yajl_callbacks callbacks = {  
     json_parse_null,
@@ -192,3 +194,6 @@ int json_parse_end_array(void * ctx)
     reader->enqueueToken(JsonStreamReader::EndArray);
     return 1;
 }
+
+
+QTX_END_NAMESPACE

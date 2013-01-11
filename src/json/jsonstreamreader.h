@@ -1,8 +1,11 @@
 #ifndef JSONSTREAMREADER_H
 #define JSONSTREAMREADER_H
 
+#include "jsonglobal.h"
 #include <QtCore>
 #include <yajl/yajl_parse.h>
+
+QTX_BEGIN_NAMESPACE
 
 
 extern int json_parse_null(void * ctx);
@@ -78,5 +81,8 @@ private:
     friend int json_parse_start_array(void * ctx);
     friend int json_parse_end_array(void * ctx);
 };
+
+
+QTX_END_NAMESPACE
 
 #endif // JSONSTREAMREADER_H

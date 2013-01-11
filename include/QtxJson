@@ -1,6 +1,7 @@
 #ifndef QTXJSON_MODULE_H
 #define QTXJSON_MODULE_H
 
+#include "../src/json/jsonglobal.h"
 #include "../src/json/jsonreader.h"
 #include "../src/json/jsonstreamreader.h"
 #include "../src/json/jsonstreamwriter.h"

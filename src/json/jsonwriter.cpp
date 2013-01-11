@@ -1,5 +1,7 @@
 #include "jsonwriter.h"
 
+QTX_BEGIN_NAMESPACE
+
 
 QString JsonWriter::stringify(const QHash<QString, QVariant> & object)
 {
@@ -87,3 +89,6 @@ void JsonWriter::writeArray(const QList<QVariant> & array)
     
     mWriter.writeEndArray();
 }
+
+
+QTX_END_NAMESPACE

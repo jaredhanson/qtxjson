@@ -1,8 +1,11 @@
 #ifndef JSONSTREAMWRITER_H
 #define JSONSTREAMWRITER_H
 
+#include "jsonglobal.h"
 #include <QtCore>
 #include <yajl/yajl_gen.h>
+
+QTX_BEGIN_NAMESPACE
 
 
 class JsonStreamWriter
@@ -27,5 +30,8 @@ public:
 private:
     yajl_gen mGenerator;
 };
+
+
+QTX_END_NAMESPACE
 
 #endif // JSONSTREAMWRITER_H

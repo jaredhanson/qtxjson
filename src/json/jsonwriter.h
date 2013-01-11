@@ -1,8 +1,11 @@
 #ifndef JSONWRITER_H
 #define JSONWRITER_H
 
+#include "jsonglobal.h"
 #include <QtCore>
 #include "jsonstreamwriter.h"
+
+QTX_BEGIN_NAMESPACE
 
 
 class JsonWriter
@@ -24,5 +27,8 @@ protected:
 private:
     JsonStreamWriter mWriter;
 };
+
+
+QTX_END_NAMESPACE
 
 #endif // JSONWRITER_H
