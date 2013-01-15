@@ -75,7 +75,7 @@ void JsonReader::parse()
     
     if (JsonStreamReader::NoError != mReader.error()) {
         mErrorString = mReader.errorString();
-        emit error(ParseError);
+        emit error(mReader.error());
     }
 }
 
@@ -107,7 +107,7 @@ void JsonReader::processEndObject()
         switch(context->type()) {
             case JsonReaderContext::Object: {
                 QHash<QString, QVariant> rootObject = context->object();
-                emit decodedObject(rootObject);
+                emit objectDecoded(rootObject);
                 
                 if (mKeepRootContext) {
                     mRootContext = context;
@@ -180,7 +180,7 @@ void JsonReader::processInvalid()
     }
     
     mErrorString = mReader.errorString();
-    emit error(ParseError);
+    emit error(mReader.error());
 }
 
 

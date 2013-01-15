@@ -15,12 +15,6 @@ class JsonReader : public QObject
     Q_OBJECT
 
 public:
-    typedef enum {
-        NoError,
-        ParseError
-    } Error;
-
-public:
     static QHash<QString, QVariant> parse(const QByteArray & data);
 
 public:
@@ -33,8 +27,8 @@ public:
     QString errorString() const;
     
 signals:
-    void decodedObject(const QHash<QString, QVariant> & object);
-    void error(JsonReader::Error err);
+    void objectDecoded(const QVariantHash & object);
+    void error(JsonStreamReader::Error err);
         
 private:
     void processStartObject();

@@ -1,0 +1,2 @@
+{"method": "cube.fill", "params": [0, 255], "id": 1}
+{"method": "cube.repaint", "params": [0], "id": 2}
