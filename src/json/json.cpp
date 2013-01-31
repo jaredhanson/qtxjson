@@ -1,5 +1,6 @@
 #include "json.h"
 #include "jsonreader.h"
+#include "jsonwriter.h"
 
 QTX_BEGIN_NAMESPACE
 
@@ -24,7 +25,7 @@ QHash<QString, QVariant> Json::parse(const QByteArray & data)
     return QHash<QString, QVariant>();
 }
 
-QString JsonWriter::stringify(const QHash<QString, QVariant> & object)
+QString Json::stringify(const QHash<QString, QVariant> & object)
 {
     JsonWriter writer;
     QByteArray bytes = writer.write(object);

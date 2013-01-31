@@ -40,6 +40,7 @@ private:
     QStack<JsonReaderContext *> mContexts;
     
     // hacky ivar to support static parse function.  clean this up.
+    friend class Json;
     bool mKeepRootContext;
     JsonReaderContext* mRootContext;
     
