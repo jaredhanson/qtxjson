@@ -3,13 +3,6 @@
 QTX_BEGIN_NAMESPACE
 
 
-QString JsonWriter::stringify(const QHash<QString, QVariant> & object)
-{
-    JsonWriter writer;
-    QByteArray bytes = writer.write(object);
-    return QString::fromUtf8(bytes);
-}
-
 JsonWriter::JsonWriter()
 {
 }

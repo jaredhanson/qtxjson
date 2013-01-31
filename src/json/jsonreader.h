@@ -13,10 +13,7 @@ class JsonReaderContext;
 class JsonReader : public QObject
 {
     Q_OBJECT
-
-public:
-    static QHash<QString, QVariant> parse(const QByteArray & data);
-
+    
 public:
     JsonReader(QObject * parent = 0);
     ~JsonReader();

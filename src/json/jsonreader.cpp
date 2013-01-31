@@ -3,27 +3,6 @@
 QTX_BEGIN_NAMESPACE
 
 
-QHash<QString, QVariant> JsonReader::parse(const QByteArray & data)
-{
-    Q_UNUSED(data)
-    
-    //qDebug() << "Static parse data";
-    
-    JsonReader reader;
-    reader.mKeepRootContext = true;
-    reader.addData(data);
-    reader.parse();
-    
-    // @todo: should check for errors at this point.
-    
-    if (reader.mRootContext) {
-        return reader.mRootContext->object();
-    }
-    
-    return QHash<QString, QVariant>();
-}
-
-
 JsonReader::JsonReader(QObject * parent)
         : QObject(parent),
           mKeepRootContext(false),

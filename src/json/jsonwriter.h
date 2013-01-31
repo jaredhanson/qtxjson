@@ -11,9 +11,6 @@ QTX_BEGIN_NAMESPACE
 class JsonWriter
 {
 public:
-    static QString stringify(const QHash<QString, QVariant> & object);
-    
-public:
     JsonWriter();
     ~JsonWriter();
 
