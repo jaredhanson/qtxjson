@@ -1,0 +1,11 @@
+/*!
+    \module QtxJson
+    \title QtxJson
+    \brief The QtxJson module contains classes for reading and writing data in JSON format.
+    
+    To include the definitions of this module's classes, use the following directive:
+    
+    \code
+        #include <QtxJson>
+    \endcode
+*/
